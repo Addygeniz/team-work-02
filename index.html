@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcake Order Form</title>
+</head>
+<body>
+    <main>
+    <article>
+        <header>
+        <h1>Cupcake Order Form</h1>
+        <p>Please use this form to order your cupcakes.</p>
+        </header>
+
+        <!-- ONE form for everything -->
+        <form>
+        <!-- Cupcake selection -->
+        <section>
+            <label for="box_size"><strong>Please choose your Box Size</strong></label>
+            <select name="box_size" id="box_size">
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+            </select>
+
+            <p><strong>Flavor Style:</strong></p>
+            <input type="radio" id="single_flavour" name="flavour_style" value="single_flavour">
+            <label for="single_flavour">Single Flavour</label><br>
+
+            <input type="radio" id="assorted_flavours" name="flavour_style" value="assorted_flavours">
+            <label for="assorted_flavours">Assorted Flavours</label><br>
+
+            <div id="single-flavour-options">
+                <p><strong>Select Your Flavour:</strong></p>
+
+                <input type="radio" id="strawberry" name="single_flavour_choice" value="strawberry">
+                <label for="strawberry">Strawberry</label><br>
+
+                <input type="radio" id="chocolate" name="single_flavour_choice" value="chocolate">
+                <label for="chocolate">Chocolate</label><br>
+
+                <input type="radio" id="vanilla" name="single_flavour_choice" value="vanilla">
+                <label for="vanilla">Vanilla</label><br>
+            </div>
+        </section>
+
+        <br>
+
+        <!-- Client Info -->
+        <section>
+            <label for="name"><strong>Your Name:</strong></label>
+            <input type="text" id="name" name="user_name">
+
+            <label for="user_email"><strong>Your Email Address:</strong></label>
+            <input type="email" id="user_email" name="user_email" required placeholder="name@example.com" title="Please enter a valid email address">
+
+            <label for="phone"><strong>Phone Number:</strong></label>
+            <input type="tel" id="phone" name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890" required>
+        </section>
+
+        <br>
+
+        <!-- Delivery Option -->
+        <section>
+            <p><strong>Delivery Method:</strong></p>
+
+            <input type="radio" id="pickup" name="delivery_method" value="pickup">
+            <label for="pickup">Pickup</label><br>
+
+            <input type="radio" id="delivery" name="delivery_method" value="delivery">
+            <label for="delivery">Delivery</label><br>
+        </section>
+
+        <br>
+
+        <button type="submit">Submit Order</button>
+        </form>
+    </article>
+    </main>
+</body>
+</html>
